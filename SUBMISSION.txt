@@ -1,0 +1,43 @@
+1. PromotionRuleEngine
+
+Contribution Date
+09/01/2026
+
+Title
+PromotionRuleEngine - Deterministic Category Discount VM
+
+Notes / Description
+Built PromotionRuleEngine, a reusable closed promotion VM where validators tag cart lines with catalog categories and deterministic code executes priority, minimum, exclusivity, stackability, basis-point, and cap rules. Its distinct GenLayer-native mechanism is semantic multi-tag plan -> category bitmap -> deterministic priority/exclusivity discount VM. Correction applied: The validator now canonicalizes the leader's attached line-category plan, recomputes every category mask and the tag digest from those lines, compares that full payload with its independent result, and repeats the binding check after consensus before discount state is written. The full selected set was checked against both steward findings: substantive leader payloads must bind every derived digest, mask, and state field, while operational registries must be owner-scoped or safely reclaimable. No web collection. Category definitions, promotions, terms, cart lines, and source references are public caller declarations. It moves no money, authenticates no merchant, executes no sale, and does not establish price, tax, or consumer-law rights. GenVM lint and strict typecheck pass; 12 direct tests and 1 five-validator GLSim integration test pass. A fresh repository-specific external wallet set was used, with no workspace, other-owner, or cross-repository wallet reuse. The StudioNet workflow finalized successfully in 3 transactions. The deployed source was read back byte-for-byte, the complete deployed schema matched abi.json exactly, and mechanism-specific terminal state was read back. The current release is commit be2b67432ece5f478e288da23949aac822c1a1f9; contract source: https://github.com/sanity456/promocart/blob/be2b67432ece5f478e288da23949aac822c1a1f9/contracts/promotion_rule_engine.py. The earlier deployment is superseded, is identified only in the correction manifest, and is not submission evidence.
+
+Release commit
+be2b67432ece5f478e288da23949aac822c1a1f9
+
+Evidence 1 Type
+GitHub Repository
+
+Evidence 1 URL
+https://github.com/sanity456/promocart
+
+Evidence 2 Type
+GitHub File
+
+Evidence 2 URL
+https://github.com/sanity456/promocart/blob/be2b67432ece5f478e288da23949aac822c1a1f9/deployments/studionet.json
+
+Evidence 3 Type
+GenLayer Studio Contract
+
+Evidence 3 URL
+https://studio.genlayer.com/?import-contract=0xf407b36837AE85e92CfF72DE5C9E7ac83c391912
+
+Evidence 4 Type
+GenLayer Explorer Contract
+
+Evidence 4 URL
+https://explorer-studio.genlayer.com/address/0xf407b36837AE85e92CfF72DE5C9E7ac83c391912
+
+Evidence 5 Type
+Other
+
+Evidence 5 URL
+https://explorer-studio.genlayer.com/tx/0x5ac09126af2dcb7540b4e01f8a896220e326e91d66fc30a061a24bd8a92bb5fa
