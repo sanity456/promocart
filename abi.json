@@ -1,0 +1,115 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "deactivate_program": {
+      "params": [
+        [
+          "program_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "evaluate_cart": {
+      "params": [
+        [
+          "evaluation_key",
+          "string"
+        ],
+        [
+          "program_id",
+          "string"
+        ],
+        [
+          "cart_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_evaluation": {
+      "params": [
+        [
+          "evaluation_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {
+        "$dict": "any"
+      }
+    },
+    "get_evaluation_count": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "get_program": {
+      "params": [
+        [
+          "program_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": {
+        "$dict": "any"
+      }
+    },
+    "matches_evaluation": {
+      "params": [
+        [
+          "evaluation_id",
+          "string"
+        ],
+        [
+          "expected_program_hash",
+          "string"
+        ],
+        [
+          "expected_discount_units",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "bool"
+    },
+    "publish_program": {
+      "params": [
+        [
+          "program_key",
+          "string"
+        ],
+        [
+          "program_json",
+          "string"
+        ],
+        [
+          "terms_text",
+          "string"
+        ],
+        [
+          "source_reference",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}

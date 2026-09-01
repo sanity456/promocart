@@ -1,0 +1,14 @@
+Correction summary for PromotionRuleEngine
+
+We applied the Boxcomplete result-binding finding and the Baggate registry-isolation finding across the full selected twelve-repository set, including this contract.
+
+What changed in this repository:
+The validator now canonicalizes the leader's attached line-category plan, recomputes every category mask and the tag digest from those lines, compares that full payload with its independent result, and repeats the binding check after consensus before discount state is written.
+
+Release evidence:
+Current StudioNet address: 0xf407b36837AE85e92CfF72DE5C9E7ac83c391912
+Deployment transaction: 0x5ac09126af2dcb7540b4e01f8a896220e326e91d66fc30a061a24bd8a92bb5fa
+Source SHA-256: 64ab022ce7ffe5d3e786094384270aa4366c92efba2a0bba624d84296a6d6b4d
+Superseded address: 0x84f49eB2B5CcD8bcF94DC6780Ce8c071a4Ac7E07
+
+The current Explorer deployment was read back after deployment and matched the repository source byte-for-byte. Its complete on-chain schema matched abi.json exactly. All recorded transactions finalized with successful execution, and the contract-specific final state was read back from StudioNet. Submission evidence must use only the current address and the commit-pinned deployment manifest; the superseded address is not active evidence.
